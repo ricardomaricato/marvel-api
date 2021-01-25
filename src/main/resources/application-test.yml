@@ -1,0 +1,12 @@
+# Database
+spring:
+  datasource:
+    url: jdbc:h2:mem:marvel-heroes
+    driverClassName: org.h2.Driver
+    username: marvel
+    password:
+  h2:
+    console:
+      enabled: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect

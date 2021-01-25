@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "1b782951-2ff5-468c-b07b-9460c099c328",
+		"name": "Marvel_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createNewHero",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Stan Lee",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"code\": \"1\",\r\n    \"status\": \"TEXT\",\r\n    \"copyright\": \"TEXT\",\r\n    \"attributionText\": \"TEXT\",\r\n    \"attributionHTML\": \"TEXT\",\r\n    \"results\": [\r\n        {\r\n            \"name\": \"Homem Aranha\",\r\n            \"description\": \"TEXT\",\r\n            \"modified\": \"2021-01-13\",\r\n            \"resourceURI\": \"TEXT\",\r\n            \"urls\": [\r\n                {\r\n                    \"type\": \"TEXT\",\r\n                    \"url\": \"TEXT\"\r\n                }\r\n            ],\r\n            \"thumbnail\": {\r\n                \"path\": \"TEXT\",\r\n                \"extension\": \"TEXT\"\r\n            },\r\n            \"comics\": {\r\n                \"available\": 0,\r\n                \"returned\": 0,\r\n                \"collectionURI\": \"TEXT\",\r\n                \"items\": [\r\n                    {\r\n                        \"resourceURI\": \"TEXT\",\r\n                        \"name\": \"TEXT\",\r\n                        \"type\": \"TEXT\"\r\n                    }\r\n                ]\r\n            },\r\n            \"stories\": {\r\n                \"available\": 0,\r\n                \"returned\": 0,\r\n                \"collectionURI\": \"TEXT\",\r\n                \"items\": [\r\n                    {\r\n                        \"resourceURI\": \"TEXT\",\r\n                        \"name\": \"TEXT\",\r\n                        \"type\": \"TEXT\"\r\n                    }\r\n                ]\r\n            },\r\n            \"events\": {\r\n                \"available\": 0,\r\n                \"returned\": 0,\r\n                \"collectionURI\": \"TEXT\",\r\n                \"items\": [\r\n                    {\r\n                        \"resourceURI\": \"TEXT\",\r\n                        \"name\": \"TEXT\",\r\n                        \"type\": \"TEXT\"\r\n                    }\r\n                ]\r\n            },\r\n            \"series\": {\r\n                \"available\": 0,\r\n                \"returned\": 0,\r\n                \"collectionURI\": \"TEXT\",\r\n                \"items\": [\r\n                    {\r\n                        \"resourceURI\": \"TEXT\",\r\n                        \"name\": \"TEXT\",\r\n                        \"type\": \"TEXT\"\r\n                    }\r\n                ]\r\n            }\r\n        }\r\n    ],\r\n    \"etag\": \"TEXT\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:443/v1/public/characters",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "443",
+					"path": [
+						"v1",
+						"public",
+						"characters"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "characters",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:443/v1/public/characters?comics=1&events=1&limit=1&modifiedSince=2020-01-13&name=Spider-Man&nameStartsWith=Spider&orderBy=NAME&series=1&stories=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "443",
+					"path": [
+						"v1",
+						"public",
+						"characters"
+					],
+					"query": [
+						{
+							"key": "comics",
+							"value": "1"
+						},
+						{
+							"key": "events",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "modifiedSince",
+							"value": "2020-01-13"
+						},
+						{
+							"key": "name",
+							"value": "Spider-Man"
+						},
+						{
+							"key": "nameStartsWith",
+							"value": "Spider"
+						},
+						{
+							"key": "orderBy",
+							"value": "NAME"
+						},
+						{
+							"key": "series",
+							"value": "1"
+						},
+						{
+							"key": "stories",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "characters/{characterId}",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:443/v1/public/characters/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "443",
+					"path": [
+						"v1",
+						"public",
+						"characters",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

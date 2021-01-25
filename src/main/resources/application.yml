@@ -1,0 +1,16 @@
+info:
+  app:
+    version: '@project.version@'
+
+spring:
+  application:
+    name: 'heroes'
+  profiles:
+    active: test
+  banner:
+    location: classpath:/banner.txt
+
+server:
+  port: 443
+  servlet:
+    context-path: '/v1/public'
