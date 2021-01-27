@@ -1,6 +1,8 @@
 ### MARVEL API
 [![Build Status](https://travis-ci.com/liliannss/marvel-api.svg?branch=main)](https://travis-ci.com/liliannss/marvel-api)
 
+[![codecov](https://codecov.io/gh/liliannss/marvel-api/branch/main/graph/badge.svg?token=BWGJINSVPT)](https://codecov.io/gh/liliannss/marvel-api)
+
 ### Versão
 - V. 0.0.1 -> 13/01/2021
 
