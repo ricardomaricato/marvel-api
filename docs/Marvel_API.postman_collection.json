@@ -39,12 +39,12 @@
 					"raw": "{\r\n    \"code\": \"1\",\r\n    \"status\": \"TEXT\",\r\n    \"copyright\": \"TEXT\",\r\n    \"attributionText\": \"TEXT\",\r\n    \"attributionHTML\": \"TEXT\",\r\n    \"results\": [\r\n        {\r\n            \"name\": \"Homem Aranha\",\r\n            \"description\": \"TEXT\",\r\n            \"modified\": \"2021-01-13\",\r\n            \"resourceURI\": \"TEXT\",\r\n            \"urls\": [\r\n                {\r\n                    \"type\": \"TEXT\",\r\n                    \"url\": \"TEXT\"\r\n                }\r\n            ],\r\n            \"thumbnail\": {\r\n                \"path\": \"TEXT\",\r\n                \"extension\": \"TEXT\"\r\n            },\r\n            \"comics\": {\r\n                \"available\": 0,\r\n                \"returned\": 0,\r\n                \"collectionURI\": \"TEXT\",\r\n                \"items\": [\r\n                    {\r\n                        \"resourceURI\": \"TEXT\",\r\n                        \"name\": \"TEXT\",\r\n                        \"type\": \"TEXT\"\r\n                    }\r\n                ]\r\n            },\r\n            \"stories\": {\r\n                \"available\": 0,\r\n                \"returned\": 0,\r\n                \"collectionURI\": \"TEXT\",\r\n                \"items\": [\r\n                    {\r\n                        \"resourceURI\": \"TEXT\",\r\n                        \"name\": \"TEXT\",\r\n                        \"type\": \"TEXT\"\r\n                    }\r\n                ]\r\n            },\r\n            \"events\": {\r\n                \"available\": 0,\r\n                \"returned\": 0,\r\n                \"collectionURI\": \"TEXT\",\r\n                \"items\": [\r\n                    {\r\n                        \"resourceURI\": \"TEXT\",\r\n                        \"name\": \"TEXT\",\r\n                        \"type\": \"TEXT\"\r\n                    }\r\n                ]\r\n            },\r\n            \"series\": {\r\n                \"available\": 0,\r\n                \"returned\": 0,\r\n                \"collectionURI\": \"TEXT\",\r\n                \"items\": [\r\n                    {\r\n                        \"resourceURI\": \"TEXT\",\r\n                        \"name\": \"TEXT\",\r\n                        \"type\": \"TEXT\"\r\n                    }\r\n                ]\r\n            }\r\n        }\r\n    ],\r\n    \"etag\": \"TEXT\"\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:443/v1/public/characters",
+					"raw": "http://localhost:8080/v1/public/characters",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "443",
+					"port": "8080",
 					"path": [
 						"v1",
 						"public",
@@ -65,12 +65,12 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:443/v1/public/characters?comics=1&events=1&limit=1&modifiedSince=2020-01-13&name=Spider-Man&nameStartsWith=Spider&orderBy=NAME&series=1&stories=1",
+					"raw": "http://localhost:8080/v1/public/characters?comics=1&events=1&limit=1&modifiedSince=2020-01-13&name=Spider-Man&nameStartsWith=Spider&orderBy=NAME&series=1&stories=1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "443",
+					"port": "8080",
 					"path": [
 						"v1",
 						"public",
@@ -129,12 +129,12 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:443/v1/public/characters/1",
+					"raw": "http://localhost:8080/v1/public/characters/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "443",
+					"port": "8080",
 					"path": [
 						"v1",
 						"public",

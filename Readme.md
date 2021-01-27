@@ -32,7 +32,7 @@
 ```
 - Iniciar a classe GatewayApplication
 
-### Swagger - [URL](http:localhost:8080/v1/public/swagger-ui.html)
+### Swagger - [URL](http:localhost:8080/swagger-ui.html)
 ### ![alt text](imgs/endpoints.png)
 
 ### Autenticação em Memória 
@@ -47,7 +47,7 @@
     mvn clean test
 ```
 
-### Base de Dados em Memória - [URL](http:localhost:8080/v1/public/h2-console)
+### Base de Dados em Memória - [URL](http:localhost:8080/h2-console)
 - #### Observação: necessário que a aplicação tenha sido inicializada através da classe Main
 ```json
 Driver Class: org.h2.Driver
@@ -67,7 +67,7 @@ Password:
 ````
 - Em casos de alteração de código
 ```json
-    docker-compose up --force-recreat
+    docker-compose build --no-cache --pull
 ```
 
 ### Prometheus - [URL](http://localhost:9090/targets)
