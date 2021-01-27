@@ -5,12 +5,22 @@ info:
 spring:
   application:
     name: 'heroes'
+  servlet:
+    context-path: '/v1/public'
   profiles:
     active: test
   banner:
     location: classpath:/banner.txt
 
-server:
-  port: 443
-  servlet:
-    context-path: '/v1/public'
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'metrics', 'prometheus', 'health'
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+    export:
+      prometheus:
+        enabled: true

@@ -40,7 +40,7 @@ public class CharacterResource {
             @ApiResponse(code = 409, message = "Conflict", response = ErrorDTO.class)
     })
     public List<HeroDTO> getCreatorCollection(@Valid ApiMarvelRequest request) {
-        log.info("START CONSULT: " + request);
+        log.info("START CONSULT: {} ", request);
         List<Hero> heroList = service.getCreatorCollection(request);
 
         List<HeroDTO> heroDTOList = heroList
@@ -64,7 +64,7 @@ public class CharacterResource {
                     example = "1",
                     required = true)
             @PathVariable("characterId") Long characterId) {
-        log.info("START CONSULT: " + characterId);
+        log.info("START CONSULT: {} ", characterId);
         Hero hero = service.getCharacterIndividual(characterId);
 
         return converter.toDTO(hero);
@@ -72,7 +72,7 @@ public class CharacterResource {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    @ApiOperation(value = "Create a new Hero")
+    @ApiOperation(value = "Create a new Hero.")
     @ApiResponses(value = {
             @ApiResponse(code = 201, message = "Created"),
             @ApiResponse(code = 409, message = "Conflict", response = ErrorDTO.class),
@@ -80,7 +80,7 @@ public class CharacterResource {
     public ResponseEntity<Hero> createNewHero(UriComponentsBuilder uriComponentsBuilder, @RequestBody @Valid HeroDTO heroDTO) {
         Hero hero = converter.toEntity(heroDTO);
 
-        log.info("CREATE NEW HERO: " + hero);
+        log.info("CREATE NEW HERO: {} ", hero);
         Hero newHero = service.createNewHero(hero);
 
         UriComponents uriComponents = getUriComponents(uriComponentsBuilder, newHero);

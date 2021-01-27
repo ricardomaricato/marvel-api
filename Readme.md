@@ -1,4 +1,4 @@
-### <center>MARVEL API</center>
+### MARVEL API
 [![Build Status](https://travis-ci.com/liliannss/marvel-api.svg?branch=main)](https://travis-ci.com/liliannss/marvel-api)
 
 ### Versão
@@ -22,42 +22,30 @@
     docker-compose --version
 ````
 
-### <center>Instruções local</center>
+### Instruções local
 - Baixar o código do repositório remoto
-
 ```json
   git clone https:github.com/liliannss/marvel-api.git
 ```
-
 - Iniciar a classe GatewayApplication
 
+### Swagger - [URL](http:localhost:443/v1/public/swagger-ui.html)
+### ![alt text](imgs/endpoints.png)
 
-### <center>Endpoints</center>
-*GET* /characters -> Fetches lists of comic characters with optional filters.See notes on individual parameters below.  
-*GET* /characters/{characterId} -> This method fetches a single character resource.It is the canonical URI for any character resource provided by the API.  
-
-### <center>Endpoint - Extra</center>
-*POST* /characters -> Create a new Hero
-
-### Swagger
-[URL Swagger](http:localhost:443/v1/public/swagger-ui.html)
-
-### <center>Autenticação em Memória</center> 
+### Autenticação em Memória 
 ```json
     Nome de usuário: Stan Lee
     Senha: 123
 ```
 
-### <center>Testes Unitários</center>
+### Testes Unitários
 - Executar comando mvn para execução dos testes
 ```json
     mvn clean test
 ```
 
-### <center>Base de Dados em Memória</center>
-- #### Observação: necessário que a aplicação tenha sido startada através da classe Main   
-[URL Banco de Dados](http:localhost:443/v1/public/h2-console)
-
+### Base de Dados em Memória - [URL](http:localhost:443/v1/public/h2-console)
+- #### Observação: necessário que a aplicação tenha sido inicializada através da classe Main
 ```json
 Driver Class: org.h2.Driver
 JDBC URL: jdbc:h2:mem:marvel-heroes
@@ -65,23 +53,26 @@ User Name: marvel
 Password:
 ```
 
-### <center>Dockercompose</center>
-
+### Dockercompose
 - Criar o arquivo .jar do projeto
 ```json
     mvn clean package
 ````
-
 - Na pasta do projeto executar     
-- #### Espere uns segundos até que o container suba e você consiga fazer suas requisições =)
-
 ````json
     docker-compose up -d
 ````
-### <center>![alt text](imgs/docker-compose.png)</center>    
+- Em casos de alteração de código
+```json
+    docker-compose up --force-recreat
+```
 
+### Prometheus - [URL](http://localhost:9090/targets)
+![alt text](imgs/prometheus.png)
 
-
-# <center>SAVE THE HEROES</center>
-
-### <center>![alt text](imgs/heroes.png)</center>    
+### Grafana - (Micrometer Dashboard - 4701) [URL](http://localhost:3000)
+```json
+    user: admin
+    password: secure_pass
+```
+![alt text](imgs/grafana.png)

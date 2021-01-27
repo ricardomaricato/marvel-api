@@ -39,7 +39,7 @@ public class ApiMarvelServiceImpl implements ApiMarvelService {
                 .limit(request.getLimit())
                 .collect(Collectors.toList());
 
-        if (!heroList.isEmpty()) log.error("HERO CONSULTED: " + heroList);
+        if (!heroList.isEmpty()) log.error("HERO CONSULTED: {} ", heroList);
 
         return heroList;
     }
@@ -49,8 +49,8 @@ public class ApiMarvelServiceImpl implements ApiMarvelService {
     public Hero getCharacterIndividual(Long characterId) {
         Optional<Hero> hero = repository.findById(characterId);
 
-        if (!hero.isPresent()) log.error("HERO CONSULTED: " + CHARACTER_NOT_FOUND.message);
-        else log.info("HERO CONSULTED: " + hero);
+        if (!hero.isPresent()) log.error("HERO CONSULTED: {} ", CHARACTER_NOT_FOUND.message);
+        else log.info("HERO CONSULTED: {} ", hero);
 
         return hero
                 .orElseThrow(() -> new BusinessException(CHARACTER_NOT_FOUND));
