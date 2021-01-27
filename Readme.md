@@ -5,6 +5,7 @@
 
 ### Versão
 - V. 0.0.1 -> 13/01/2021
+- V. 0.0.2 -> 27/01/2021
 
 ### Java Version
 - 11
@@ -77,4 +78,6 @@ Password:
     user: admin
     password: secure_pass
 ```
+- Configurando Data Source Prometheus
+![alt text](imgs/data_source_prometheus.png)
 ![alt text](imgs/grafana.png)
