@@ -32,7 +32,7 @@
 ```
 - Iniciar a classe GatewayApplication
 
-### Swagger - [URL](http:localhost:443/v1/public/swagger-ui.html)
+### Swagger - [URL](http:localhost:8080/v1/public/swagger-ui.html)
 ### ![alt text](imgs/endpoints.png)
 
 ### Autenticação em Memória 
@@ -47,7 +47,7 @@
     mvn clean test
 ```
 
-### Base de Dados em Memória - [URL](http:localhost:443/v1/public/h2-console)
+### Base de Dados em Memória - [URL](http:localhost:8080/v1/public/h2-console)
 - #### Observação: necessário que a aplicação tenha sido inicializada através da classe Main
 ```json
 Driver Class: org.h2.Driver
