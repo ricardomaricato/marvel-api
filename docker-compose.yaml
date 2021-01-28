@@ -3,7 +3,6 @@ services:
   # Back-End
   marvel-backend:
     container_name: marvel-api
-    image: marvel_api:2
     restart: always
     build:
       context: .
