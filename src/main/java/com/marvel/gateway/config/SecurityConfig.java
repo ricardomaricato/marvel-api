@@ -50,7 +50,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 "/api/swagger-resources/**",
                 "/api/configuration/security",
                 "/api/swagger-ui",
-                "/api/webjars/**");
+                "/api/webjars/**",
+                "/actuator/prometheus/**");
     }
 
 }
