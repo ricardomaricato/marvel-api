@@ -71,7 +71,8 @@ Password:
 ```
 
 ### Prometheus - [URL](http://localhost:9090/targets)
-![alt text](imgs/prometheus.png)
+
+[comment]: <> (![alt text]&#40;imgs/prometheus.png&#41;)
 
 ### Grafana - (Micrometer Dashboard - 4701) [URL](http://localhost:3000)
 ```json
@@ -79,5 +80,7 @@ Password:
     password: secure_pass
 ```
 - Configurando Data Source Prometheus
-![alt text](imgs/data_source_grafana.png)
-![alt text](imgs/grafana.png)
+
+[comment]: <> (![alt text]&#40;imgs/data_source_grafana.png&#41;)
+
+[comment]: <> (![alt text]&#40;imgs/grafana.png&#41;)
