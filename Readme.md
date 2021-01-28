@@ -79,5 +79,5 @@ Password:
     password: secure_pass
 ```
 - Configurando Data Source Prometheus
-![alt text](imgs/data_source_prometheus.png)
+![alt text](imgs/data_source_grafana.png)
 ![alt text](imgs/grafana.png)
